@@ -14,7 +14,14 @@ const cities = [
 
 export default function MapCoverage() {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="relative
+        min-h-screen
+        flex items-center
+        py-24
+        bg-gradient-to-b
+        from-white
+        to-blue-50
+        overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
 
         <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -31,8 +38,8 @@ export default function MapCoverage() {
             </h2>
 
             <p className="text-gray-600 mb-8 max-w-md">
-              Teleport.Net hadir di titik-titik strategis Indonesia untuk 
-              mendukung akselerasi bisnis Anda melalui infrastruktur 
+              Teleport.Net hadir di titik-titik strategis Indonesia untuk
+              mendukung akselerasi bisnis Anda melalui infrastruktur
               backbone yang handal.
             </p>
 
@@ -54,7 +61,7 @@ export default function MapCoverage() {
           </div>
 
           {/* RIGHT MAP */}
-          <div className="relative">
+          <div className="relative w-full aspect-[16/10]">
 
             {/* SLA Badge */}
             <div className="absolute -top-6 -right-6 bg-blue-600 text-white px-6 py-4 rounded-xl shadow-lg rotate-3 z-10">
@@ -68,23 +75,23 @@ export default function MapCoverage() {
               <img
                 src={IndonesiaMap}
                 alt="Indonesia Map"
-                className="w-full"
+                className="w-full h-full object-contain"
               />
 
               {/* MARKERS */}
               {cities.map((city, index) => (
                 <div
                   key={index}
-                  className="absolute"
+                  className="absolute -translate-x-1/2 -translate-y-1/2"
                   style={{ top: city.top, left: city.left }}
                 >
                   <div className="relative">
 
                     {/* Dot */}
-                    <div className="w-3 h-3 bg-blue-600 rounded-full"></div>
+                    <div className="relative w-4 h-4 bg-blue-600 border-4 border-white rounded-full shadow-lg"></div>
 
                     {/* Ping Animation */}
-                    <div className="absolute inset-0 w-3 h-3 bg-blue-400 rounded-full animate-ping"></div>
+                    <div className="absolute inset-0 bg-blue-400 rounded-full animate-ping opacity-75"></div>
 
                   </div>
                 </div>
