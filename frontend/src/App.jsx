@@ -2,11 +2,11 @@
 
 import Navbar from "./component/Navbar";
 import HeroSection from "./component/HeroSection";
-import PricingTable from "./component/PricingTable";
-import Mapcoverage from "./component/Mapcoverage";
-import ContactISP from "./component/ContactISP";
-import Footer from "./component/Footer";
-import Service from "./component/Service";
+import Contact from "./component/Contact";
+import About from "./component/About";
+import Skill from "./component/Skills"
+import Project from "./component/Project"
+
 
 import "leaflet/dist/leaflet.css";
 
@@ -18,40 +18,25 @@ function App() {
 
       {/* Hero */}
       <section id="home" className="scroll-mt-32">
-        <HeroSection
-          title="Internet Service Provider untuk Rumah dan Bisnis Anda"
-          subtitle="TELEPORT.NET - Provider Fiber Optic Tercepat di Indonesia"
-          ctaText="CEK KETERSEDIAAN"
-        />
+        <HeroSection/>
       </section>
 
-      {/* Coverage */}
-      <section id="coverage" className="scroll-mt-40">
-        <Mapcoverage />
+      <section id="about" className="scroll-mt-32">
+        <About/>
       </section>
 
-      {/* Services */}
-      <section id="services" className="scroll-mt-32">
-        <Service />
+      <section id="skills" className="scroll-mt-32">
+        <Skill/>
       </section>
 
-      {/* Pricing */}
-      <section id="pricing" className="scroll-mt-32">
-        <PricingTable />
+      <section id="projects" className="scroll-mt-32">
+        <Project/>
       </section>
 
       {/* Contact */}
       <section id="contact" className="scroll-mt-32">
-        <ContactISP />
+        <Contact />
       </section>
-
-      {/* Footer */}
-      <Footer
-        companyName="TELEPORT.NET"
-        address="Jl. Gatot Subroto No. 42, Jakarta Selatan"
-        phone="+62 21 1234 5678"
-        email="cs@teleport.net"
-      />
 
     </div>
   );
