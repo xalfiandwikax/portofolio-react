@@ -26,9 +26,6 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <p className="text-cyan-400 mb-4 tracking-widest uppercase text-sm">
-              Welcome To My Portfolio
-            </p>
 
             <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
               Hi, I'm{" "}
